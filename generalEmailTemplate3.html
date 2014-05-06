@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- If you delete this tag, the sky will fall on your head -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bridg Emails</title>
+	
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/email.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/emailBridg2.css" /> -->
+
+<style>
+/* ------------------------------------- 
+		GLOBAL 
+------------------------------------- */
+* { 
+	margin:0;
+	padding:0;
+}
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+img { 
+	max-width: 100%; 
+}
+.collapse {
+	margin:0;
+	padding:0;
+	color: white;
+}
+.rightheader {
+	margin: 0px 4px 0px 0px;
+	color: white;
+}
+a.noline {
+	text-decoration: none;
+	color: white;	
+}
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+}
+
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+a { color: #2BA6CB;}
+
+.btn {
+	text-decoration:none;
+	color: #FFF;
+	background-color: #01df01;
+	padding:10px 16px;
+	font-weight:bold;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+	border-radius: 3px;
+}
+
+p.callout {
+	/*padding:15px;*/
+	background-color:#ECF8FF;
+	/*margin-bottom: 15px;*/
+}
+.callout a {
+	font-weight:bold;
+	color: #2BA6CB;
+}
+
+table.social {
+/* 	padding:15px; */
+	background-color: #ebebeb;
+	
+}
+.social .soc-btn {
+	padding: 3px 7px;
+	font-size:12px;
+	margin-bottom:10px;
+	text-decoration:none;
+	color: #FFF;font-weight:bold;
+	display:block;
+	text-align:center;
+}
+a.fb { background-color: #3B5998!important; }
+a.tw { background-color: #1daced!important; }
+a.gp { background-color: #DB4A39!important; }
+a.ms { background-color: #000!important; }
+
+.sidebar .soc-btn { 
+	display:block;
+	width:100%;
+}
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important; /*margin: 20px 0px 20px 0px;*/ padding: 25px 0px 25px 0px;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}
+
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+
+h1 { font-weight:200; font-size: 44px;}
+h2 { font-weight:200; font-size: 37px;}
+h3 { font-weight:500; font-size: 27px;}
+h4 { font-weight:500; font-size: 23px;}
+h5 { font-weight:900; font-size: 17px;}
+h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+
+.collapse { margin:0!important;}
+
+p, ul { 
+	margin-bottom: 10px; 
+	font-weight: normal; 
+	font-size:14px; 
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+	margin-left:5px;
+	list-style-position: inside;
+}
+
+/* ------------------------------------- 
+		SIDEBAR 
+------------------------------------- */
+ul.sidebar {
+	background:#ebebeb;
+	display:block;
+	list-style-type: none;
+}
+ul.sidebar li { display: block; margin:0;}
+ul.sidebar li a {
+	text-decoration:none;
+	color: #666;
+	padding:10px 16px;
+/* 	font-weight:bold; */
+	margin-right:10px;
+/* 	text-align:center; */
+	cursor:pointer;
+	border-bottom: 1px solid #777777;
+	border-top: 1px solid #FFFFFF;
+	display:block;
+	margin:0;
+}
+ul.sidebar li a.last { border-bottom-width:0px;}
+ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
+
+
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:0 auto!important; /* makes it centered */
+	clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	/*padding:15px;*/
+	max-width:600px;
+	margin:0 auto;
+	display:block; 
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+
+/* Odds and ends */
+.column {
+	width: 300px;
+	float:left;
+}
+.column tr td { padding: 15px; }
+.column-wrap { 
+	padding:0!important; 
+	margin:0 auto; 
+	max-width:600px!important;
+}
+.column table { width:100%;}
+.social .column {
+	width: 280px;
+	min-width: 279px;
+	float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
+
+/* ----------- Bridg email mods by Ray Dipasupil ----------------*/
+img.headrimg {
+	margin-left: -15px;
+	width: 35%;
+}
+
+section {
+	max-width: 580px;
+	padding: 20px 10px 0px 10px;
+	/*border: 2px solid red;*/
+}
+
+img.locator {
+	width: 45px !important;
+	display: inline;
+	text-decoration: none;
+	margin: 0px 0px 0px 0px;
+}
+
+img.heroimg {
+	/*margin-top: -4px;
+	margin-bottom: 0px;*/
+	margin: -4px 0px 0px 0px;
+}
+
+p.mainpg {
+	font-size: 16px;
+
+}
+
+/* Buttons */
+
+table.button,
+table.tiny-button,
+table.small-button,
+table.medium-button,
+table.large-button {
+  overflow: hidden;
+}
+
+table.button td,
+table.tiny-button td,
+table.small-button td,
+table.medium-button td,
+table.large-button td {
+  display: block;
+  width: 275px !important;
+  text-align: center;
+  background: #31B404;
+  /*background: #3B5998;*/
+  /*border: 1px solid #2284a1;*/
+  color: #ffffff;
+  padding: 12px 0;
+  border-radius: 3px;
+}
+
+table.tiny-button td {
+  padding: 5px 0 4px;
+}
+
+table.small-button td {
+  padding: 8px 0 7px;
+}
+
+table.medium-button td {
+  padding: 12px 0 10px;
+}
+
+table.large-button td {
+  padding: 21px 0 18px;
+}
+
+table.button td a,
+table.tiny-button td a,
+table.small-button td a,
+table.medium-button td a,
+table.large-button td a {
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+table.tiny-button td a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+table.small-button td a {
+  font-size: 16px;
+}
+
+table.medium-button td a {
+  font-size: 20px;
+}
+
+table.large-button td a {
+  font-size: 24px;
+}
+
+table.button:hover td,
+table.button:visited td,
+table.button:active td {
+  background: #31B404 !important;
+}
+
+table.button:hover td a,
+table.button:visited td a,
+table.button:active td a {
+  color: #fff !important;
+}
+
+table.button:hover td,
+table.tiny-button:hover td,
+table.small-button:hover td,
+table.medium-button:hover td,
+table.large-button:hover td {
+  background: #31B404 !important;
+}
+
+table.button:hover td a,
+table.button:active td a,
+table.button td a:visited,
+table.tiny-button:hover td a,
+table.tiny-button:active td a,
+table.tiny-button td a:visited,
+table.small-button:hover td a,
+table.small-button:active td a,
+table.small-button td a:visited,
+table.medium-button:hover td a,
+table.medium-button:active td a,
+table.medium-button td a:visited,
+table.large-button:hover td a,
+table.large-button:active td a,
+table.large-button td a:visited {
+  color: #ffffff !important; 
+}
+
+/*------------ Bridg social buttons by Ray Dipasupil ---------------------*/
+ul.social-buttons {
+  text-align: center;
+  /*margin-top: 50px;*/
+} 
+
+/*ul.social-buttons li {
+  table-layout: auto;
+  
+  Display don't work with Outlook HTML. Super wack.
+  display: block; 
+  display: inline-block; 
+  margin: 0 10px;
+}*/
+
+img.ray-twitter, .ray-facebook, .ray-instagram, .ray-pinterest {
+	max-width: 40px;
+	margin: 0 3%;
+}
+
+p.lastFooter {
+	color: white;
+}
+
+/* ------------------------------------------- 
+		PHONE
+		For clients that support media queries.
+		Nothing fancy. 
+-------------------------------------------- */
+@media only screen and (max-width: 600px) {
+	
+	a[class="btn"] { display:block!important; /*margin-bottom:10px!important;*/ background-image:none!important; margin-right:0!important;}
+
+	div[class="column"] { width: auto!important; float:none!important;}
+	
+	table.social div[class="column"] {
+		/*width:auto!important;*/
+	}
+
+  table.button td,
+	table.tiny-button td,
+	table.small-button td,
+	table.medium-button td,
+	table.large-button td {
+	  width: 225px !important;
+	}
+
+	
+	img.heroimg {
+	/*margin-top: -4px;
+	margin-bottom: 0px;*/
+	margin: -4px 0px 0px -6px;
+	max-width: 103.25%; 
+	}
+
+	body {
+		max-width: 103.25%;
+	}
+}
+</style>
+
+
+</head> 
+
+<body bgcolor="#FFFFFF">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#004812">
+	<tr>
+		<td></td>
+		<td class="header container">
+			
+				<div class="content">
+					<table bgcolor="#004812">
+					<tr>
+						<td><a href="#"><img src="https://ci3.googleusercontent.com/proxy/UjPKoBjfxR9kP_3uhevEsZKGLLav_iMb-kEYATAYldJhV45r5uJmpA=s0-d-e1-ft#http://icy.tc/ZiFN" class="headrimg" alt="leftLogo" /></a></td>
+						<td align="right"><span><a href="#" class="noline rightheader"><img src="http://bridg.com/wp-content/uploads/2014/04/whitepin1-150x150.png" class="locator"><h6 class="rightheader">TULLY'S</h6><h6 class="rightheader">Locator</h6></a></span></td>
+					</tr>
+				</table>
+				</div>
+				
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /HEADER -->
+
+
+<!-- BODY -->
+<table class="body-wrap">
+	<tr>
+
+
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+
+			<div class="content">
+			<table>
+				<tr>
+					<td>
+						
+						<!-- <h3>Welcome, Elijah Baily</h3>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p> -->
+						
+						<h5 style="padding-top: 10px; border-top: 2px solid black; border-bottom: 2px solid black; padding-bottom: 10px;">Community Newsletter</h5>
+
+						<!-- A Real Hero (and a real human being) -->
+						<p><img src="http://d1mpb3f4gq7nrb.cloudfront.net/img/toons/cartoon6532.png" class="heroimg" width="596px" /></p><!-- /hero
+						
+						<!-- Callout Panel -->
+						<section>
+							
+							<!-- <td>
+								<table border="0" cellpadding="0" cellspacing="0" width="620px">
+									<tbody>
+										<tr>
+											<td width="0">&nbsp;</td>
+											<td style="background: white; margin-top: 30px; padding-top: 10px; padding-bottom: 10px; border-top: 1px solid black; border-bottom: 1px solid black; font-family: arial, sans-serif; font-size: 13px;">
+												<strong>Community Newsletter</strong>
+											</td>
+											<td width="0">&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>	
+							</td> -->
+
+							<h4>Happy Tuesday from Tully's Coffee</h4>
+							<p class="mainpg">We're taking a moment to check up on how we're doing. Care to help us out and take our 2-question survey? It takes less than 4.71 seconds!</p>
+							<!-- <a class="btn">Click Me!</a> -->
+
+							<table class="row">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="three columns" >
+                        <tr>
+                          <td>
+
+                            <a href="#"><table class="button">
+                              <tr align="center">
+                                <td align="center">
+                                  <!-- <a href="#"> --><b>Take the Survey</b><!-- </a> -->
+                                </td>
+                              </tr>
+                            </table></a>
+
+                          </td>
+                        	<td class="expander"></td>
+                      	</tr>
+                    	</table>
+
+                  </td>
+                </tr>
+              </table>
+
+							<br/>
+							<br/>
+						</section>								
+												
+						<!-- social -->
+							<ul class="social-buttons" id="demo">
+							  <!-- <li> --> <!-- Because list items render wack on Microsoft Outlook [works well in other email clients, though]. Yes, super lame. You'd think that with a company so flushed with cash they'd allocate a tiny amount for modern web standards, but alas. -->
+							    <!-- <a href="#"><img src="http://armsaroundthechild.org/wp-content/themes/boowp-aatc/img/twitter-icon-ow-v1-70x70.gif" class="ray-twitter"></a> -->
+							  <!-- </li>
+							  <li> -->
+							    <!-- <a href="#"><img src="http://nordiclarp.org/facebook_70x70.png" class="ray-facebook"></a> -->
+							  <!-- </li>
+							  <li> -->
+							    <!-- <a href="#"><img src="http://www.fuelyourventure.com/files/instagram-70x70.png" class="ray-instagram"></a> -->
+							  <!-- </li> -->
+							</ul>
+						<!-- /social -->
+					
+					
+					</td>
+				</tr>
+			</table>
+			</div>
+									
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+
+<!-- FOOTER v1-->
+<!-- <table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+			
+				<div class="content">
+				<table>
+				<tr>
+					<td align="center">
+						<p><b>Hungry Howie's Pizza</b></p>
+						<p>11390 West Olympic Blvd., Los Angeles, CA 90034</p>
+						<p>1-800-432-5765</p>
+						<p>
+							<a href="#">Terms</a> |
+							<a href="#">Privacy</a> |
+							<a href="#">Website</a> |
+							<a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
+						</p>
+					</td>
+				</tr>
+			</table>
+				</div>
+				
+		</td>
+		<td></td>
+	</tr>
+</table> --><!-- /FOOTER v1-->
+
+<!-- FOOTER v2 -->
+<table class="head-wrap footer-wrap" bgcolor="#004812">
+	<tr>
+		<td></td>
+		<td class="header container">
+			
+				<div class="content">
+					<table bgcolor="#004812">
+					<tr>
+						
+						<table>
+						<tr>
+						<td align="center">
+						<ul class="social-buttons" id="demo">
+							  <!-- <li> --> <!-- Because list items render wack on Microsoft Outlook [works well in other email clients, though]. Yes, super lame. You'd think that with a company so flushed with cash they'd allocate a tiny amount for modern web standards, but alas. -->
+							    <!-- <a href="#"><img src="http://armsaroundthechild.org/wp-content/themes/boowp-aatc/img/twitter-icon-ow-v1-70x70.gif" class="ray-twitter"></a> -->
+							    <a href="#"><img src="http://bridg.com/wp-content/uploads/2014/04/twitter-48.png" class="ray-twitter"></a>
+							  <!-- </li>
+							  <li> -->
+							    <!-- <a href="#"><img src="http://nordiclarp.org/facebook_70x70.png" class="ray-facebook"></a> -->
+							    <a href="#"><img src="http://bridg.com/wp-content/uploads/2014/04/facebook-48.png" class="ray-facebook"></a>
+							  <!-- </li>
+							  <li> -->
+							    <!-- <a href="#"><img src="http://www.fuelyourventure.com/files/instagram-70x70.png" class="ray-instagram"></a> -->
+							    <a href="#"><img src="http://bridg.com/wp-content/uploads/2014/04/instagram-48.png" class="ray-instagram"></a>
+							  <!-- </li> -->
+							  	<a href="#"><img src="http://bridg.com/wp-content/uploads/2014/04/pinterest-5-48.png" class="ray-pinterest"></a>
+						</ul>
+						<!-- <p><b>Hungry Howie's Pizza</b></p>
+						<p>11390 West Olympic Blvd., Los Angeles, CA 90034</p>
+						<p>1-800-432-5765</p> -->
+						<p>
+							<a href="#" class="noline">Terms |</a> 
+							<!-- <a href="#" class="noline">Privacy</a> | -->
+							<a href="#" class="noline">Franchise Info |</a> 
+							<a href="#" class="noline">Gift Cards |</a> 
+							<a href="#" class="noline">Fundraising |</a> 
+							<a href="#" class="noline"><unsubscribe>Unsubscribe</unsubscribe></a>
+						</p>
+						<p class="lastFooter">
+							9420 RESEDA BLVD • NORTHRIDGE • CA • 91324 
+						</p>
+						</td>
+						</tr>
+						</table>
+
+					</tr>
+				</table>
+				</div>
+				
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /FOOTER v2 -->
+
+</body>
+</html>
